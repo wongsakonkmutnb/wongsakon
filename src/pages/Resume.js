@@ -1,19 +1,17 @@
 import React from "react";
-
+import bgImg2 from "../images/kmutnb2.jpg";
 function Resume() {
   return (
-    <section className="resume-section" style={{ minHeight: "80vh" }}>
+    // เพิ่ม id="resume" ตรงนี้
+    <section id="resume" className="resume-section" style={{ minHeight: "80vh",backgroundImage: `url(${bgImg2})`,backgroundSize: "cover"}}>
       <h2>ประสบการณ์และการศึกษา</h2>
       <div className="resume-grid">
         <div className="resume-card">
-          <h3 className="section-title">ประสบการณ์ทำงาน</h3>
+          <h3 className="section-title">ประสบการณ์ฝึกงาน</h3>
           <div className="resume-item">
             <h4>ตำแหน่งงาน | ชื่อบริษัท</h4>
-            <span className="date">2024 - ปัจจุบัน</span>
-            <p>
-              อธิบายรายละเอียดงานที่คุณทำ ความรับผิดชอบหลัก
-              และผลงานที่โดดเด่น...
-            </p>
+            <span className="date">2024 - ปัจจุบัน</span>  
+            <p>อธิบายรายละเอียดงานที่คุณทำ ความรับผิดชอบหลัก และผลงานที่โดดเด่น...</p>
           </div>
         </div>
 
@@ -22,9 +20,7 @@ function Resume() {
           <div className="resume-item">
             <h4>ปริญญาตรี สาขา... | มหาวิทยาลัย...</h4>
             <span className="date">จบการศึกษาปี 2023</span>
-            <p>
-              เกรดเฉลี่ย โครงการจบ (Senior Project) หรือกิจกรรมที่โดดเด่น...
-            </p>
+            <p>เกรดเฉลี่ย โครงการจบ (Senior Project) หรือกิจกรรมที่โดดเด่น...</p>
           </div>
         </div>
       </div>

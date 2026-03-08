@@ -1,26 +1,34 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import profileImg from "../images/w1.png";
+import bgImg from "../images/kmutnb.jpg"; // ดึงรูปพื้นหลังเข้ามา
 
 function Home() {
   return (
-    <section className="hero-section" style={{ minHeight: "80vh" }}>
-      <div className="hero-text">
-        <h2>
-          สวัสดี! ฉันชื่อ
-          <br />
-          วงศกร รอดประเสริฐ
-        </h2>
-        <p>
-          ฉันคือ Web Developer ยินดีต้อนรับสู่พอร์ตโฟลิโอของฉัน
-          ฉันรักในการสร้างสรรค์ประสบการณ์บนเว็บไซต์ที่ใช้งานง่ายและสวยงาม
-        </p>
-        <Link to="/contact" className="btn-primary">
-          ติดต่องานฉัน
-        </Link>
-      </div>
-      <div className="hero-image">
-        <img src={profileImg} alt="Profile" />
+    <section 
+      id="home" 
+      className="hero-section" 
+      style={{ 
+        minHeight: "100vh",
+        backgroundImage: `url(${bgImg})`, // ตั้งค่ารูปพื้นหลัง
+        backgroundSize: "cover", // ให้รูปขยายเต็มพื้นที่
+        backgroundPosition: "center" // จัดรูปให้อยู่กึ่งกลาง
+      }}
+    >
+      {/* กล่องสีขาวโปร่งแสงที่เพิ่มเข้ามาใหม่ */}
+      <div className="hero-content">
+        <div className="hero-text">
+          <h2>Hello My name is<br />วงศกร รอดประเสริฐ</h2>
+          <p>
+            ฉันคือ Web Developer ยินดีต้อนรับสู่พอร์ตโฟลิโอของฉัน
+            ฉันรักในการสร้างสรรค์ประสบการณ์บนเว็บไซต์ที่ใช้งานง่ายและสวยงาม
+          </p>
+          <a href="/#contact" className="btn-primary">
+            ติดต่องานฉัน
+          </a>
+        </div>
+        <div className="hero-image">
+          <img src={profileImg} alt="Profile" />
+        </div>
       </div>
     </section>
   );

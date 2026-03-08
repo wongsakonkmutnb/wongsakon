@@ -23,14 +23,6 @@ function Transcript() {
           />
         </div>
 
-        {/* รูปที่ 2 (ถ้ามีหลายหน้า ก็ก๊อปปี้ block นี้เพิ่มได้เลย) */}
-        <div style={{ width: "100%", maxWidth: "600px", boxShadow: "0 4px 8px rgba(0,0,0,0.1)" }}>
-          <img 
-            src="https://via.placeholder.com/600x800?text=Transcript+Page+2" 
-            alt="Transcript 2" 
-            style={{ width: "100%", display: "block", borderRadius: "8px" }}
-          />
-        </div>
 
       </div>
     </section>
