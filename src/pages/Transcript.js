@@ -1,6 +1,6 @@
 import React from "react";
 // นำเข้ารูปภาพทรานสคริปต์ของคุณจากโฟลเดอร์ images (ถ้ามีรูปจริงให้เปลี่ยนชื่อไฟล์ตามนี้ครับ)
-// import transImg1 from "../images/transcript1.jpg";
+import transImg1 from "../images/t2.jpg";
 
 function Transcript() {
   return (
@@ -17,7 +17,7 @@ function Transcript() {
         <div style={{ width: "100%", maxWidth: "600px", boxShadow: "0 4px 8px rgba(0,0,0,0.1)" }}>
           {/* เปลี่ยน src เป็น {transImg1} เมื่อคุณมีรูปจริง */}
           <img 
-            src="https://via.placeholder.com/600x800?text=Transcript+Page+1" 
+            src={transImg1} 
             alt="Transcript 1" 
             style={{ width: "100%", display: "block", borderRadius: "8px" }}
           />
