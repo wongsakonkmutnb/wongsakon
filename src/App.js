@@ -22,9 +22,10 @@ function App() {
   <nav>
     <a href="/#home">หน้าแรก</a>
     <a href="/#resume">ประวัติ</a>
+     <a href="/#contact">ติดต่อ</a>
     <Link to="/history#internship-section">รายละเอียดประวัติ</Link>
     <Link to="/transcript">Transcript</Link>
-    <a href="/#contact">ติดต่อ</a>
+   
   </nav>
 </header>
 
