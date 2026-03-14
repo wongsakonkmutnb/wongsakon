@@ -2,9 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
-// ดึงหน้าหลัก(แบบเลื่อนยาว) และ หน้าผลการเรียน(แยกหน้า) มาใช้
+// ดึงหน้าต่างๆ มาใช้งาน
 import MainPage from "./pages/MainPage";
 import Transcript from "./pages/Transcript";
+import History from "./pages/History"; // 1. นำเข้าหน้า History ที่สร้างใหม่
 
 function App() {
   return (
@@ -12,26 +13,29 @@ function App() {
       <div className="app-container">
         
         {/* แถบเมนูด้านบน */}
-        <header className="header">
-          <h1>Wongsakon</h1>
-          <nav>
-            {/* ใช้ a href="/#..." เพื่อให้วิ่งไปหาส่วนนั้นๆ ในหน้าหลัก */}
-            <a href="/#home">หน้าแรก</a>
-            <a href="/#resume">ประวัติ</a>
-            <a href="/#contact">ติดต่อ</a>
-            {/* ส่วนผลการเรียนใช้ Link เพื่อเปลี่ยนไปอีกหน้า */}
-            <Link to="/transcript">Transcript</Link>
-
-          </nav>
-        </header>
+<header className="header">
+  {/* เปลี่ยน h1 เป็น Link เพื่อให้กดแล้วกลับหน้าแรก */}
+  <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+    <h1>Wongsakon</h1>
+  </Link>
+  
+  <nav>
+    <a href="/#home">หน้าแรก</a>
+    <a href="/#resume">ประวัติ</a>
+    <Link to="/history#internship-section">รายละเอียดประวัติ</Link>
+    <Link to="/transcript">Transcript</Link>
+    <a href="/#contact">ติดต่อ</a>
+  </nav>
+</header>
 
         {/* ระบบจัดการเส้นทาง */}
         <Routes>
-          {/* หน้าแรกจะแสดง MainPage (ที่รวม Home, Resume, Contact ไว้) */}
           <Route path="/" element={<MainPage />} />
-          
-          {/* หน้าผลการเรียนแยกไปอีก URL นึง */}
           <Route path="/transcript" element={<Transcript />} />
+          
+          {/* 3. เพิ่ม Route สำหรับหน้า History */}
+          
+          <Route path="/history" element={<History />} />
         </Routes>
         
       </div>
