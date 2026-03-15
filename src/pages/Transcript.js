@@ -1,6 +1,6 @@
 import React from "react";
 // นำเข้ารูปภาพทรานสคริปต์ของคุณจากโฟลเดอร์ images (ถ้ามีรูปจริงให้เปลี่ยนชื่อไฟล์ตามนี้ครับ)
-import transImg1 from "../images/t2.jpg";
+import transImg1 from "../images/transs.jpg";
 
 function Transcript() {
   return (
